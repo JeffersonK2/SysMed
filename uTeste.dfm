@@ -14,8 +14,8 @@ object Form1: TForm1
   PixelsPerInch = 96
   TextHeight = 13
   object cxPageControl1: TcxPageControl
-    Left = 8
-    Top = 8
+    Left = 208
+    Top = 104
     Width = 289
     Height = 193
     TabOrder = 0

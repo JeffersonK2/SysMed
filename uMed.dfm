@@ -1748,7 +1748,6 @@ object ulogin: Tulogin
     Width = 153
     Height = 41
     Caption = 'Acessar'
-    Flat = True
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -27

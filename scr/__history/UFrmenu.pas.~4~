@@ -100,7 +100,6 @@ type
     procedure FormShow(Sender: TObject);
     procedure Panel2Click(Sender: TObject);
     procedure Panel21Click(Sender: TObject);
-    procedure Pacientes1Click(Sender: TObject);
   private
     { Private declarations }
 
@@ -124,16 +123,6 @@ end;
 procedure TFrmenu.FormShow(Sender: TObject);
 begin
 SelecionaMenu(0);
-end;
-
-procedure TFrmenu.Pacientes1Click(Sender: TObject);
-begin
-if Frusuario = nil then
-      Begin
-        Application.CreateForm(TFrusuario, Frusuario);
-      End;
-
-      Frusuario.show;
 end;
 
 procedure TFrmenu.Panel12Click(Sender: TObject);

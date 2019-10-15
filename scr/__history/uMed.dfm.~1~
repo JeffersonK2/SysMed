@@ -1816,7 +1816,7 @@ object ulogin: Tulogin
     Properties.Strings = (
       'codepage=LATIN1')
     HostName = 'localhost'
-    Port = 5432
+    Port = 5433
     Database = 'saude'
     User = 'postgres'
     Password = 'ids0207'

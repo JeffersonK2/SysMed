@@ -16,5 +16,7 @@ begin
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(Tulogin, ulogin);
   Application.CreateForm(TdmServer, dmServer);
+  Application.CreateForm(TFroperadores, Froperadores);
+  Application.CreateForm(TFrusuario, Frusuario);
   Application.Run;
 end.

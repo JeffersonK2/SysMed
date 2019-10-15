@@ -6519,7 +6519,6 @@ object Frmenu: TFrmenu
       ParentBackground = False
       ParentFont = False
       TabOrder = 4
-      OnClick = Panel21Click
       OnMouseEnter = Panel21MouseEnter
       OnMouseLeave = Panel21MouseLeave
       object Image21: TImage
@@ -14014,8 +14013,7 @@ object Frmenu: TFrmenu
         Caption = 'Conv'#234'nios'
       end
       object Pacientes1: TMenuItem
-        Caption = 'Usu'#225'rios'
-        OnClick = Pacientes1Click
+        Caption = 'Pacientes'
       end
       object Profissionais1: TMenuItem
         Caption = 'Profissionais'

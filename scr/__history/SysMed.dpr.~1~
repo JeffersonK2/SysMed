@@ -5,9 +5,7 @@ uses
   uMed in 'uMed.pas' {ulogin},
   UFrmenu in 'UFrmenu.pas' {Frmenu},
   UFragendamento in 'UFragendamento.pas' {Frmagendamento},
-  dmSever in 'dmSever.pas' {dmServer: TDataModule},
-  UFroperador in 'UFroperador.pas' {Froperadores},
-  UFrusuario in 'UFrusuario.pas' {Frusuario};
+  dmSever in 'dmSever.pas' {dmServer: TDataModule};
 
 {$R *.res}
 

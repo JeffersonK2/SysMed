@@ -15,7 +15,6 @@ type
   Tulogin = class(TForm)
     lblogin: TcxLabel;
     QueOperador: TZQuery;
-    conexao: TZConnection;
     txtlogin: TcxTextEdit;
     cxLabel1: TcxLabel;
     edSenha: TEdit;
@@ -36,6 +35,8 @@ var
 implementation
 
 {$R *.dfm}
+
+uses dmSever;
 
 
 procedure Tulogin.SpeedButton1Click(Sender: TObject);

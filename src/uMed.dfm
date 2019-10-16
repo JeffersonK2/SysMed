@@ -1803,26 +1803,9 @@ object ulogin: Tulogin
     TabOrder = 3
   end
   object QueOperador: TZQuery
-    Connection = conexao
+    Connection = dmServer.conexao
     Params = <>
     Left = 16
     Top = 104
-  end
-  object conexao: TZConnection
-    ControlsCodePage = cCP_UTF16
-    AutoEncodeStrings = True
-    ClientCodepage = 'LATIN1'
-    Catalog = ''
-    Properties.Strings = (
-      'codepage=LATIN1')
-    Connected = True
-    HostName = 'localhost'
-    Port = 5432
-    Database = 'saude'
-    User = 'postgres'
-    Password = 'ids0207'
-    Protocol = 'postgresql'
-    Left = 16
-    Top = 24
   end
 end

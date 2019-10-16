@@ -34,6 +34,7 @@ type
     Label4: TLabel;
     cxDBSpinEdit1: TcxDBSpinEdit;
     TxtNome: TcxDBTextEdit;
+    cxDBTextEdit3: TcxDBTextEdit;
     cxDBTextEdit4: TcxDBTextEdit;
     cxDBTextEdit5: TcxDBTextEdit;
     cxDBTextEdit6: TcxDBTextEdit;
@@ -71,13 +72,6 @@ type
     QueTabelatelefone: TWideStringField;
     QueTabelatelefone_contato: TWideStringField;
     QueTabeladt_nascimento: TDateField;
-    Label5: TLabel;
-    cxDBMaskEdit2: TcxDBMaskEdit;
-    cxDBMaskEdit3: TcxDBMaskEdit;
-    cxDBMaskEdit4: TcxDBMaskEdit;
-    Label6: TLabel;
-    cxDBMaskEdit5: TcxDBMaskEdit;
-    Label12: TLabel;
     procedure FormShow(Sender: TObject);
     procedure lcestadoPropertiesEditValueChanged(Sender: TObject);
     procedure AtivaDesativaBotoes;
@@ -171,23 +165,11 @@ end;
 
 procedure TFrusuario.BtnPesquisaClick(Sender: TObject);
 begin
-  QueTabela.close;
+QueTabela.close;
   QueTabela.SQL.Clear;
-  QueTabela.SQL.Add('Select * from tab_usuarios where nome like :pPesq');
+  QueTabela.SQL.Add('Select * from tab_usuarios where nom like :pPesq');
   QueTabela.ParamByName('pPesq').AsString := '%' + TxtValorPesquisa.Text + '%';
   QueTabela.Open;
-
-  if lcestado.Text <> '' then
-    begin
-      QueCidades.close;
-      QueCidades.SQL.Clear;
-      QueCidades.SQL.Add
-        ('Select codigo_cidade,nome_cidade from cidades where sigla_estado = :pEst');
-      QueCidades.ParamByName('pEst').AsString := trim(lcestado.Text);
-      QueCidades.Open;
-
-      QueCidades.Active := True;
-    end;
 end;
 
 procedure TFrusuario.DBGrid1DblClick(Sender: TObject);
@@ -210,8 +192,6 @@ begin
 QueEstados.Active := True;
   QueCidades.Active := True;
   QueTabela.Open;
-
-  PageControl1.ActivePageIndex := 1;
 end;
 
 procedure TFrusuario.lcestadoPropertiesEditValueChanged(Sender: TObject);

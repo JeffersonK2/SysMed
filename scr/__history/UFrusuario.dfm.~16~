@@ -2,8 +2,8 @@ object Frusuario: TFrusuario
   Left = 0
   Top = 0
   Caption = 'Usu'#225'rios'
-  ClientHeight = 346
-  ClientWidth = 559
+  ClientHeight = 416
+  ClientWidth = 732
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,7 +12,6 @@ object Frusuario: TFrusuario
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
-  OnClose = FormClose
   OnDestroy = FormDestroy
   OnShow = FormShow
   PixelsPerInch = 96
@@ -20,9 +19,9 @@ object Frusuario: TFrusuario
   object PageControl1: TPageControl
     Left = 0
     Top = 0
-    Width = 559
-    Height = 346
-    ActivePage = TabSheet1
+    Width = 732
+    Height = 416
+    ActivePage = TabSheet2
     Align = alClient
     TabOrder = 0
     ExplicitWidth = 634
@@ -44,10 +43,10 @@ object Frusuario: TFrusuario
         Left = 16
         Top = 32
         TabOrder = 0
-        Width = 440
+        Width = 512
       end
       object BtnPesquisa: TcxButton
-        Left = 462
+        Left = 534
         Top = 28
         Width = 75
         Height = 25
@@ -81,50 +80,29 @@ object Frusuario: TFrusuario
           F0BD44AE2807205AFD2DFC4189A66CA0C450820371040EB18198981242610371
           ACF96F64B046FD0FE22625E3DA6A63E80000000049454E44AE426082}
         TabOrder = 1
-        OnClick = BtnPesquisaClick
       end
       object DBGrid1: TDBGrid
         Left = 16
         Top = 59
-        Width = 521
+        Width = 593
         Height = 214
-        DataSource = DataSource1
         TabOrder = 2
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Tahoma'
         TitleFont.Style = []
-        OnDblClick = DBGrid1DblClick
         Columns = <
           item
             Expanded = False
             FieldName = 'codigo'
-            Title.Caption = 'Cod.'
+            Title.Caption = 'Codigo'
             Visible = True
           end
           item
             Expanded = False
-            FieldName = 'nome'
+            FieldName = 'nom'
             Title.Caption = 'Nome'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'cpf'
-            Title.Caption = 'C.P.F'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'sexo'
-            Title.Caption = 'Sexo'
-            Visible = True
-          end
-          item
-            Expanded = False
-            FieldName = 'dt_nascimento'
-            Title.Caption = 'Dt. Nascimento'
             Visible = True
           end>
       end
@@ -134,7 +112,6 @@ object Frusuario: TFrusuario
       ImageIndex = 1
       ExplicitLeft = 8
       ExplicitTop = 28
-      ExplicitWidth = 665
       object Label2: TLabel
         Left = 3
         Top = 13
@@ -152,32 +129,32 @@ object Frusuario: TFrusuario
         FocusControl = TxtNome
       end
       object lblcpfcnpj: TLabel
-        Left = 168
-        Top = 64
-        Width = 24
+        Left = 165
+        Top = 66
+        Width = 19
         Height = 13
         Caption = 'CPF'
         FocusControl = cxDBTextEdit3
       end
       object lblrgie: TLabel
-        Left = 344
-        Top = 61
+        Left = 314
+        Top = 66
         Width = 14
         Height = 16
         Caption = 'RG'
         FocusControl = cxDBTextEdit4
       end
       object Label7: TLabel
-        Left = 3
-        Top = 106
+        Left = 138
+        Top = 112
         Width = 45
         Height = 13
         Caption = 'Endereco'
         FocusControl = cxDBTextEdit5
       end
       object Label8: TLabel
-        Left = 471
-        Top = 106
+        Left = 405
+        Top = 112
         Width = 37
         Height = 13
         Caption = 'Numero'
@@ -185,15 +162,15 @@ object Frusuario: TFrusuario
       end
       object Label9: TLabel
         Left = 3
-        Top = 186
+        Top = 155
         Width = 28
         Height = 13
         Caption = 'Bairro'
         FocusControl = cxDBTextEdit7
       end
       object Label10: TLabel
-        Left = 138
-        Top = 147
+        Left = 464
+        Top = 115
         Width = 65
         Height = 13
         Caption = 'Complemento'
@@ -201,22 +178,22 @@ object Frusuario: TFrusuario
       end
       object Label11: TLabel
         Left = 3
-        Top = 147
+        Top = 115
         Width = 19
         Height = 13
         Caption = 'CEP'
       end
       object Label3: TLabel
-        Left = 279
-        Top = 186
+        Left = 199
+        Top = 155
         Width = 33
         Height = 13
         Caption = 'Estado'
         FocusControl = cxDBTextEdit7
       end
       object Label4: TLabel
-        Left = 352
-        Top = 186
+        Left = 263
+        Top = 155
         Width = 33
         Height = 13
         Caption = 'Cidade'
@@ -237,59 +214,59 @@ object Frusuario: TFrusuario
         DataBinding.DataField = 'nome'
         DataBinding.DataSource = DataSource1
         TabOrder = 1
-        Width = 450
+        Width = 506
       end
       object cxDBTextEdit3: TcxDBTextEdit
         Left = 165
-        Top = 79
+        Top = 85
         DataBinding.DataField = 'cpf'
         DataBinding.DataSource = DataSource1
         TabOrder = 2
-        Width = 159
+        Width = 143
       end
       object cxDBTextEdit4: TcxDBTextEdit
-        Left = 344
-        Top = 79
+        Left = 314
+        Top = 80
         DataBinding.DataField = 'rg'
         DataBinding.DataSource = DataSource1
         TabOrder = 3
-        Width = 185
+        Width = 121
       end
       object cxDBTextEdit5: TcxDBTextEdit
-        Left = 3
-        Top = 121
+        Left = 138
+        Top = 131
         DataBinding.DataField = 'endereco'
         DataBinding.DataSource = DataSource1
         TabOrder = 4
-        Width = 462
+        Width = 261
       end
       object cxDBTextEdit6: TcxDBTextEdit
-        Left = 471
-        Top = 121
+        Left = 405
+        Top = 131
         DataBinding.DataField = 'numero'
         DataBinding.DataSource = DataSource1
         TabOrder = 5
-        Width = 58
+        Width = 55
       end
       object cxDBTextEdit7: TcxDBTextEdit
         Left = 3
-        Top = 199
+        Top = 168
         DataBinding.DataField = 'bairro'
         DataBinding.DataSource = DataSource1
         TabOrder = 6
-        Width = 270
+        Width = 190
       end
       object cxDBTextEdit8: TcxDBTextEdit
-        Left = 138
-        Top = 161
+        Left = 464
+        Top = 131
         DataBinding.DataField = 'complemento'
         DataBinding.DataSource = DataSource1
         TabOrder = 7
-        Width = 391
+        Width = 121
       end
       object lcestado: TcxDBLookupComboBox
-        Left = 279
-        Top = 199
+        Left = 199
+        Top = 168
         DataBinding.DataField = 'codigo_uf'
         DataBinding.DataSource = DataSource1
         Properties.KeyFieldNames = 'codigo_estado'
@@ -297,14 +274,13 @@ object Frusuario: TFrusuario
           item
             FieldName = 'sigla_estado'
           end>
-        Properties.ListSource = DataSource2
         Properties.OnEditValueChanged = lcestadoPropertiesEditValueChanged
         TabOrder = 8
         Width = 58
       end
       object lccidade: TcxDBLookupComboBox
-        Left = 352
-        Top = 199
+        Left = 263
+        Top = 168
         DataBinding.DataField = 'codigo_cidade'
         DataBinding.DataSource = DataSource1
         Properties.KeyFieldNames = 'codigo_cidade'
@@ -312,13 +288,12 @@ object Frusuario: TFrusuario
           item
             FieldName = 'nome_cidade'
           end>
-        Properties.ListSource = DataSource3
         TabOrder = 9
-        Width = 177
+        Width = 145
       end
       object cxDBMaskEdit1: TcxDBMaskEdit
         Left = 3
-        Top = 161
+        Top = 131
         DataBinding.DataField = 'cep'
         DataBinding.DataSource = DataSource1
         Properties.EditMask = '99999-999'
@@ -327,7 +302,7 @@ object Frusuario: TFrusuario
       end
       object BtnIncluir: TcxButton
         Left = 3
-        Top = 272
+        Top = 232
         Width = 75
         Height = 25
         Caption = 'Incluir'
@@ -369,7 +344,7 @@ object Frusuario: TFrusuario
       end
       object BtnAlterar: TcxButton
         Left = 84
-        Top = 272
+        Top = 232
         Width = 75
         Height = 25
         Caption = 'Alterar'
@@ -408,7 +383,7 @@ object Frusuario: TFrusuario
       end
       object BtnExcluir: TcxButton
         Left = 165
-        Top = 272
+        Top = 232
         Width = 75
         Height = 25
         Caption = 'Excluir'
@@ -451,7 +426,7 @@ object Frusuario: TFrusuario
       end
       object BtnGravar: TcxButton
         Left = 263
-        Top = 272
+        Top = 232
         Width = 75
         Height = 25
         Caption = 'Gravar'
@@ -495,7 +470,7 @@ object Frusuario: TFrusuario
       end
       object BtnCancelar: TcxButton
         Left = 344
-        Top = 272
+        Top = 232
         Width = 75
         Height = 25
         Caption = 'Cancelar'
@@ -530,8 +505,8 @@ object Frusuario: TFrusuario
         OnClick = BtnCancelarClick
       end
       object cbPessoa: TcxDBRadioGroup
-        Left = 0
-        Top = 53
+        Left = 3
+        Top = 62
         Caption = 'Sexo'
         DataBinding.DataField = 'sexo'
         DataBinding.DataSource = DataSource1
@@ -558,8 +533,8 @@ object Frusuario: TFrusuario
     SQL.Strings = (
       'select * from cidades where 1 = -1')
     Params = <>
-    Left = 180
-    Top = 32
+    Left = 604
+    Top = 96
   end
   object QueEstados: TZQuery
     Connection = ulogin.conexao
@@ -569,8 +544,8 @@ object Frusuario: TFrusuario
         'Select distinct codigo_estado,sigla_estado from cidades order by' +
         ' sigla_estado')
     Params = <>
-    Left = 228
-    Top = 32
+    Left = 556
+    Top = 152
   end
   object QueTabela: TZQuery
     Connection = ulogin.conexao
@@ -578,8 +553,8 @@ object Frusuario: TFrusuario
     SQL.Strings = (
       'Select * from tab_usuarios where 0=1')
     Params = <>
-    Left = 276
-    Top = 32
+    Left = 588
+    Top = 216
     object QueTabelacodigo: TIntegerField
       FieldName = 'codigo'
       Required = True
@@ -641,24 +616,20 @@ object Frusuario: TFrusuario
       FieldName = 'telefone_contato'
       Size = 10
     end
-    object QueTabeladt_nascimento: TDateField
-      FieldName = 'dt_nascimento'
-      ReadOnly = True
-    end
   end
   object DataSource3: TDataSource
     DataSet = QueCidades
-    Left = 268
-    Top = 96
+    Left = 540
+    Top = 232
   end
   object DataSource2: TDataSource
     DataSet = QueEstados
-    Left = 344
-    Top = 96
+    Left = 472
+    Top = 216
   end
   object DataSource1: TDataSource
     DataSet = QueTabela
-    Left = 304
-    Top = 96
+    Left = 552
+    Top = 80
   end
 end

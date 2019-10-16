@@ -13,6 +13,7 @@ object ulogin: Tulogin
   KeyPreview = True
   OldCreateOrder = False
   Position = poDesktopCenter
+  OnKeyPress = FormKeyPress
   PixelsPerInch = 96
   TextHeight = 13
   object Image1: TImage
@@ -1743,20 +1744,6 @@ object ulogin: Tulogin
     ExplicitWidth = 105
     ExplicitHeight = 105
   end
-  object SpeedButton1: TSpeedButton
-    Left = 128
-    Top = 192
-    Width = 185
-    Height = 41
-    Caption = 'Acessar'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -27
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-    OnClick = SpeedButton1Click
-  end
   object lblogin: TcxLabel
     Left = 179
     Top = 35
@@ -1802,26 +1789,25 @@ object ulogin: Tulogin
     PasswordChar = '*'
     TabOrder = 3
   end
+  object btnAcessar: TBitBtn
+    Left = 128
+    Top = 184
+    Width = 185
+    Height = 41
+    Caption = 'Acessar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -27
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+    OnClick = btnAcessarClick
+  end
   object QueOperador: TZQuery
-    Connection = conexao
+    Connection = dmServer.conexao
     Params = <>
     Left = 16
     Top = 104
-  end
-  object conexao: TZConnection
-    ControlsCodePage = cCP_UTF16
-    AutoEncodeStrings = True
-    ClientCodepage = 'LATIN1'
-    Catalog = ''
-    Properties.Strings = (
-      'codepage=LATIN1')
-    HostName = 'localhost'
-    Port = 5433
-    Database = 'saude'
-    User = 'postgres'
-    Password = 'ids0207'
-    Protocol = 'postgresql'
-    Left = 16
-    Top = 24
   end
 end

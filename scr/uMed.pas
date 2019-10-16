@@ -15,14 +15,15 @@ type
   Tulogin = class(TForm)
     lblogin: TcxLabel;
     QueOperador: TZQuery;
-    conexao: TZConnection;
     txtlogin: TcxTextEdit;
     cxLabel1: TcxLabel;
     edSenha: TEdit;
     Image1: TImage;
-    SpeedButton1: TSpeedButton;
+    btnAcessar: TBitBtn;
 
     procedure SpeedButton1Click(Sender: TObject);
+    procedure FormKeyPress(Sender: TObject; var Key: Char);
+    procedure btnAcessarClick(Sender: TObject);
   
   private
     { Private declarations }
@@ -37,6 +38,57 @@ implementation
 
 {$R *.dfm}
 
+uses dmSever;
+
+
+procedure Tulogin.btnAcessarClick(Sender: TObject);
+var
+  senha, operador: String;
+begin
+  QueOperador.Close;
+  QueOperador.SQL.Clear;
+  QueOperador.SQL.Add
+    ('select nome_operador, senha_operador from tab_operador where login_operador = :pPesq');
+  QueOperador.ParamByName('pPesq').AsString := txtlogin.Text;
+  QueOperador.Open;
+
+  if QueOperador.RecordCount > 0 then
+  begin
+    senha := edSenha.Text;
+    if (senha.Equals(QueOperador.FieldByName('senha_operador').AsString)) then
+    Begin
+
+      if Frmenu = nil then
+      Begin
+        Application.CreateForm(TFrmenu, Frmenu);
+      End;
+
+      Frmenu.show;
+      ulogin.Enabled:=False;
+      //Close;
+    End
+    else
+    Begin
+      ShowMessage('Operador ou Senha Incorretos!');
+      txtlogin.SetFocus;
+    end;
+  end
+  else
+  Begin
+    ShowMessage('Operador ou Senha Incorretos!');
+    txtlogin.SetFocus;
+  end;
+
+end;
+
+procedure Tulogin.FormKeyPress(Sender: TObject; var Key: Char);
+begin
+  if key = #13 then
+    begin  //se for, passa o foco para o próximo campo, zerando o valor da variável Key
+      Key:= #0;
+      Perform(Wm_NextDlgCtl,0,0);
+    end;
+end;
 
 procedure Tulogin.SpeedButton1Click(Sender: TObject);
 var

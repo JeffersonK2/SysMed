@@ -1,0 +1,26 @@
+unit dmSever;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, ZAbstractConnection, ZConnection;
+
+type
+  TdmServer = class(TDataModule)
+    conexao: TZConnection;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmServer: TdmServer;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

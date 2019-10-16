@@ -1,2 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<BorlandProject/>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2019/10/15 20:07:12.783,=C:\SysMed\scr\Unit1.pas</Transaction>
+    <Transaction>2019/10/15 20:07:32.480,C:\SysMed\scr\uFrFuncoes.pas=C:\SysMed\scr\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

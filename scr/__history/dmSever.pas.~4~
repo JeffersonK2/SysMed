@@ -1,0 +1,76 @@
+unit dmSever;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, ZAbstractConnection, ZConnection;
+
+type
+  TdmServer = class(TDataModule)
+    conexao: TZConnection;
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmServer: TdmServer;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses uFrFuncoes;
+
+{$R *.dfm}
+
+procedure TdmServer.DataModuleCreate(Sender: TObject);
+var
+s, sNomBco, sBcoDad, sIPSrv,sCamRel,sCamDll,
+sUsuBco, sSenBco, sPorBco, sPortaExe: String;
+begin
+  try  //extrai as informações do aquivo INI e configura a conexão
+    conexao.Connected  := False;
+    conexao.Protocol   := '';
+
+
+   { NomBco = database
+    IPSrv  = hostname
+    SenBco = password
+    PorBco = port
+    BcoDad = 0 protocol
+    UsuBco = user   }
+
+    sNomBco   := LerINI(ExtractFilePath(dmServer.StartPath)+'\SysMed.ini','SysMed','NomBco');
+    sBcoDad   := LerINI(ExtractFilePath(dmServer.StartPath)+'\SysMed.ini','SysMed','BcoDad');
+    sIPSrv    := LerINI(ExtractFilePath(dmServer.StartPath)+'\SysMed.ini','SysMed','IPSrv');
+    sUsuBco   := LerINI(ExtractFilePath(dmServer.StartPath)+'\SysMed.ini','SysMed','UsuBco');
+    sSenBco   := LerINI(ExtractFilePath(dmServer.StartPath)+'\SysMed.ini','SysMed','SenBco');
+    sPorBco    := LerINI(ExtractFilePath(dmServer.StartPath)+'\SysMed.ini','SysMed','Porta');
+
+    case StrToInt(sBcoDad) of
+      0: sBcoDad := 'firebird';
+      1: sBcoDad := 'postgresql';
+    end;
+    sUsuBco := DesCriptografa(sUsuBco,10);
+    sSenBco := DesCriptografa(sSenBco,10);
+    Port    := StrToInt(sPortaExe);
+    FDConect.DriverName                := sBcoDad;
+    FDConect.Params.Values['Database'] := sCamBco;
+    FDConect.Params.Values['User_Name']:= sUsuBco;
+    FDConect.Params.Values['Password'] := sSenBco;
+    FDConect.Params.Values['Server']   := sIPSrv;
+    FDDriver.VendorLib                 := sCamDll;
+    FDConect.Connected                 := true;
+  except
+    on E: Exception do
+      begin
+        ShowMessage('Erro ao Conectar.'+ e.Message);
+        UniApplication.UniSession.Terminate('Erro ao conectar com o bando de dados');
+      end;
+  end;
+end;
+
+end.

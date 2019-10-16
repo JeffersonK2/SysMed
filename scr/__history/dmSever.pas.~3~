@@ -1,0 +1,62 @@
+unit dmSever;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, ZAbstractConnection, ZConnection;
+
+type
+  TdmServer = class(TDataModule)
+    conexao: TZConnection;
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmServer: TdmServer;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+uses uFrFuncoes;
+
+{$R *.dfm}
+
+procedure TdmServer.DataModuleCreate(Sender: TObject);
+var s, sLinha: String;
+
+begin
+  try
+    conexao.Connect  := False;
+    conexao.Protocol := '';
+    sLinha := LerINI(ExtractFilePath(Application.ExeName) + '\JPAGENDA.ini','JPAGENDA','CamBco');
+    if Copy(sLinha,1,4) = 'Erro' then
+      begin
+        ShowMessage(sLinha);
+        Self.Close;
+      end;
+    if sLinha = '' then
+      begin
+        ShowMessage('Retorno Vazio');
+        Self.Close;
+      end;
+    dmDados.WinConect.DriverName                := 'Firebird';
+    dmDados.WinConect.Params.Values['Database'] := sLinha;
+    dmDados.WinConect.Params.Values['User_Name']:= 'sysdba';
+    dmDados.WinConect.Params.Values['Password'] := 'masterkey';
+    dmDados.WinConect.Connected                 := true;
+  except
+    on E: Exception do
+      begin
+        ShowMessage('Erro ao Conectar.'+ e.Message);
+        Application.Terminate;
+      end;
+  end;
+
+end;
+
+end.

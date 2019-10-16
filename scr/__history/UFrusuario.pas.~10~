@@ -1,0 +1,84 @@
+unit UFrusuario;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, cxGraphics, cxControls, cxLookAndFeels,
+  cxLookAndFeelPainters, cxContainer, cxEdit, dxSkinsCore,
+  dxSkinsDefaultPainters, Vcl.Menus, Data.DB, ZAbstractRODataset,
+  ZAbstractDataset, ZDataset, cxGroupBox, cxRadioGroup, cxDBEdit,
+  cxDropDownEdit, cxLookupEdit, cxDBLookupEdit, cxDBLookupComboBox, cxMaskEdit,
+  cxSpinEdit, Vcl.Grids, Vcl.DBGrids, Vcl.StdCtrls, cxButtons, cxTextEdit,
+  Vcl.ComCtrls;
+
+type
+  TFrusuario = class(TForm)
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    Label1: TLabel;
+    TxtValorPesquisa: TcxTextEdit;
+    BtnPesquisa: TcxButton;
+    DBGrid1: TDBGrid;
+    TabSheet2: TTabSheet;
+    Label2: TLabel;
+    N: TLabel;
+    lblcpfcnpj: TLabel;
+    lblrgie: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    cxDBSpinEdit1: TcxDBSpinEdit;
+    TxtNome: TcxDBTextEdit;
+    cxDBTextEdit3: TcxDBTextEdit;
+    cxDBTextEdit4: TcxDBTextEdit;
+    cxDBTextEdit5: TcxDBTextEdit;
+    cxDBTextEdit6: TcxDBTextEdit;
+    cxDBTextEdit7: TcxDBTextEdit;
+    cxDBTextEdit8: TcxDBTextEdit;
+    lcestado: TcxDBLookupComboBox;
+    lccidade: TcxDBLookupComboBox;
+    cxDBMaskEdit1: TcxDBMaskEdit;
+    BtnIncluir: TcxButton;
+    BtnAlterar: TcxButton;
+    BtnExcluir: TcxButton;
+    BtnGravar: TcxButton;
+    BtnCancelar: TcxButton;
+    QueCidades: TZQuery;
+    QueEstados: TZQuery;
+    QueTabela: TZQuery;
+    QueTabelacodigo: TIntegerField;
+    QueTabelanom: TWideStringField;
+    QueTabelapessoa: TWideStringField;
+    QueTabelacnpj_cpf: TWideStringField;
+    QueTabelaie_rg: TWideStringField;
+    QueTabelaendereco: TWideStringField;
+    QueTabelanumero: TWideStringField;
+    QueTabelabairro: TWideStringField;
+    QueTabelacomplemento: TWideStringField;
+    QueTabelacep: TWideStringField;
+    QueTabelacodigo_cidade: TIntegerField;
+    QueTabelanome_cidade: TWideStringField;
+    QueTabelacodigo_uf: TIntegerField;
+    QueTabelanome_uf: TWideStringField;
+    DataSource3: TDataSource;
+    DataSource2: TDataSource;
+    cbPessoa: TcxDBRadioGroup;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frusuario: TFrusuario;
+
+implementation
+
+{$R *.dfm}
+   uses uMed;
+end.

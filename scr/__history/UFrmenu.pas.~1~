@@ -7,7 +7,7 @@ uses
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, dxGDIPlusClasses, Vcl.ExtCtrls,
   dxBarBuiltInMenu, cxClasses, cxGridCustomPopupMenu, cxGridPopupMenu,
-  Vcl.Menus, UFragendamento, UFrusuario;
+  Vcl.Menus, UFragendamento;
 
 type
   TFrmenu = class(TForm)
@@ -58,8 +58,6 @@ type
     Panel3: TPanel;
     Image9: TImage;
     Panel4: TPanel;
-    Panel1: TPanel;
-    Image11: TImage;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure Sair1Click(Sender: TObject);
     procedure pCadastroMouseEnter(Sender: TObject);
@@ -99,8 +97,6 @@ type
     procedure Panel5Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure Panel2Click(Sender: TObject);
-    procedure Panel21Click(Sender: TObject);
-    procedure Pacientes1Click(Sender: TObject);
   private
     { Private declarations }
 
@@ -124,16 +120,6 @@ end;
 procedure TFrmenu.FormShow(Sender: TObject);
 begin
 SelecionaMenu(0);
-end;
-
-procedure TFrmenu.Pacientes1Click(Sender: TObject);
-begin
-if Frusuario = nil then
-      Begin
-        Application.CreateForm(TFrusuario, Frusuario);
-      End;
-
-      Frusuario.show;
 end;
 
 procedure TFrmenu.Panel12Click(Sender: TObject);
@@ -200,16 +186,6 @@ begin
   if not(Sender is TPanel) then
     exit;
   (Sender as TPanel).ParentColor := true;
-end;
-
-procedure TFrmenu.Panel21Click(Sender: TObject);
-begin
- if Frusuario = nil then
-      Begin
-        Application.CreateForm(TFrusuario, Frusuario);
-      End;
-
-      Frusuario.show;
 end;
 
 procedure TFrmenu.Panel21MouseEnter(Sender: TObject);

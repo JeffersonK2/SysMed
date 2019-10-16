@@ -14014,8 +14014,7 @@ object Frmenu: TFrmenu
         Caption = 'Conv'#234'nios'
       end
       object Pacientes1: TMenuItem
-        Caption = 'Usu'#225'rios'
-        OnClick = Pacientes1Click
+        Caption = 'Pacientes'
       end
       object Profissionais1: TMenuItem
         Caption = 'Profissionais'

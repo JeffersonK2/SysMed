@@ -1810,4 +1810,23 @@ object ulogin: Tulogin
     Left = 16
     Top = 104
   end
+<<<<<<< HEAD
+=======
+  object conexao: TZConnection
+    ControlsCodePage = cCP_UTF16
+    AutoEncodeStrings = True
+    ClientCodepage = 'LATIN1'
+    Catalog = ''
+    Properties.Strings = (
+      'codepage=LATIN1')
+    HostName = 'localhost'
+    Port = 5432
+    Database = 'saude'
+    User = 'postgres'
+    Password = 'ids0207'
+    Protocol = 'postgresql'
+    Left = 16
+    Top = 24
+  end
+>>>>>>> d102f361a1538685d17cef86aea239a5c6d42129
 end

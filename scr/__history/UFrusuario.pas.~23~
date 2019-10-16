@@ -34,6 +34,7 @@ type
     Label4: TLabel;
     cxDBSpinEdit1: TcxDBSpinEdit;
     TxtNome: TcxDBTextEdit;
+    cxDBTextEdit3: TcxDBTextEdit;
     cxDBTextEdit4: TcxDBTextEdit;
     cxDBTextEdit5: TcxDBTextEdit;
     cxDBTextEdit6: TcxDBTextEdit;
@@ -71,13 +72,6 @@ type
     QueTabelatelefone: TWideStringField;
     QueTabelatelefone_contato: TWideStringField;
     QueTabeladt_nascimento: TDateField;
-    Label5: TLabel;
-    cxDBMaskEdit2: TcxDBMaskEdit;
-    cxDBMaskEdit3: TcxDBMaskEdit;
-    cxDBMaskEdit4: TcxDBMaskEdit;
-    Label6: TLabel;
-    cxDBMaskEdit5: TcxDBMaskEdit;
-    Label12: TLabel;
     procedure FormShow(Sender: TObject);
     procedure lcestadoPropertiesEditValueChanged(Sender: TObject);
     procedure AtivaDesativaBotoes;

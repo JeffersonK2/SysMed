@@ -71,8 +71,19 @@ type
     QueTabelasexo: TWideStringField;
     QueTabelatelefone: TWideStringField;
     QueTabelatelefone_contato: TWideStringField;
+    QueTabeladt_nascimento: TDateField;
     procedure FormShow(Sender: TObject);
     procedure lcestadoPropertiesEditValueChanged(Sender: TObject);
+    procedure AtivaDesativaBotoes;
+    procedure BtnAlterarClick(Sender: TObject);
+    procedure BtnCancelarClick(Sender: TObject);
+    procedure BtnExcluirClick(Sender: TObject);
+    procedure BtnGravarClick(Sender: TObject);
+    procedure BtnIncluirClick(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure BtnPesquisaClick(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -86,11 +97,103 @@ implementation
 
 {$R *.dfm}
    uses uMed;
+
+
+   procedure TFrusuario.AtivaDesativaBotoes;
+begin
+  BtnIncluir.Enabled := not BtnIncluir.Enabled;
+  BtnExcluir.Enabled := not BtnExcluir.Enabled;
+  BtnAlterar.Enabled := not BtnAlterar.Enabled;
+  BtnCancelar.Enabled := not BtnCancelar.Enabled;
+  BtnGravar.Enabled := not BtnGravar.Enabled;
+end;
+
+
+procedure TFrusuario.BtnAlterarClick(Sender: TObject);
+begin
+if not QueTabela.fieldByName('codigo').IsNull then
+  Begin
+    AtivaDesativaBotoes;
+    QueTabela.Edit;
+    TxtNome.SetFocus;
+  End
+  else
+  begin
+    ShowMessage('Nenhum registro Selecionado para Edição');
+  end;
+end;
+
+procedure TFrusuario.BtnCancelarClick(Sender: TObject);
+begin
+AtivaDesativaBotoes;
+  QueTabela.Cancel;
+end;
+
+procedure TFrusuario.BtnExcluirClick(Sender: TObject);
+begin
+if not QueTabela.fieldByName('codigo').IsNull then
+  Begin
+    QueTabela.Delete;
+    ShowMessage('Cliente Excluido com Sucesso!');
+  End
+  else
+  Begin
+    ShowMessage('Nenhum Cliente Selecionado');
+  End;
+end;
+
+procedure TFrusuario.BtnGravarClick(Sender: TObject);
+begin
+Try
+    QueTabela.FieldByName('nome_cidade').AsString:= lccidade.Text;
+    QueTabela.FieldByName('nome_uf').AsString := lcestado.Text;
+    QueTabela.Post;
+    AtivaDesativaBotoes;
+    ShowMessage('Usuários Gravado com Sucesso!');
+  except
+    ShowMessage('Erro ao Gravar');
+  End;
+end;
+
+procedure TFrusuario.BtnIncluirClick(Sender: TObject);
+begin
+AtivaDesativaBotoes;
+  QueTabela.Append;
+  cbPessoa.ItemIndex := 0;
+  TxtNome.SetFocus;
+end;
+
+procedure TFrusuario.BtnPesquisaClick(Sender: TObject);
+begin
+  QueTabela.close;
+  QueTabela.SQL.Clear;
+  QueTabela.SQL.Add('Select * from tab_usuarios where nome like :pPesq');
+  QueTabela.ParamByName('pPesq').AsString := '%' + TxtValorPesquisa.Text + '%';
+  QueTabela.Open;
+end;
+
+procedure TFrusuario.DBGrid1DblClick(Sender: TObject);
+begin
+PageControl1.ActivePageIndex := 1;
+end;
+
+procedure TFrusuario.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+Action := caFree
+end;
+
+procedure TFrusuario.FormDestroy(Sender: TObject);
+begin
+ Frusuario := nil;
+end;
+
 procedure TFrusuario.FormShow(Sender: TObject);
 begin
 QueEstados.Active := True;
   QueCidades.Active := True;
   QueTabela.Open;
+
+  PageControl1.ActivePageIndex := 1;
 end;
 
 procedure TFrusuario.lcestadoPropertiesEditValueChanged(Sender: TObject);

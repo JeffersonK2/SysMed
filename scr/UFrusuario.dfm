@@ -22,7 +22,7 @@ object Frusuario: TFrusuario
     Top = 0
     Width = 559
     Height = 346
-    ActivePage = TabSheet1
+    ActivePage = TabSheet2
     Align = alClient
     TabOrder = 0
     ExplicitWidth = 634
@@ -132,9 +132,7 @@ object Frusuario: TFrusuario
     object TabSheet2: TTabSheet
       Caption = 'Cadastro'
       ImageIndex = 1
-      ExplicitLeft = 8
-      ExplicitTop = 28
-      ExplicitWidth = 665
+      ExplicitTop = 25
       object Label2: TLabel
         Left = 3
         Top = 13
@@ -157,10 +155,9 @@ object Frusuario: TFrusuario
         Width = 24
         Height = 13
         Caption = 'CPF'
-        FocusControl = cxDBTextEdit3
       end
       object lblrgie: TLabel
-        Left = 344
+        Left = 352
         Top = 61
         Width = 14
         Height = 16
@@ -222,6 +219,27 @@ object Frusuario: TFrusuario
         Caption = 'Cidade'
         FocusControl = cxDBTextEdit7
       end
+      object Label5: TLabel
+        Left = 423
+        Top = 13
+        Width = 73
+        Height = 13
+        Caption = 'Dt. Nascimento'
+      end
+      object Label6: TLabel
+        Left = 3
+        Top = 221
+        Width = 42
+        Height = 13
+        Caption = 'Telefone'
+      end
+      object Label12: TLabel
+        Left = 138
+        Top = 221
+        Width = 60
+        Height = 13
+        Caption = 'Tel. Contato'
+      end
       object cxDBSpinEdit1: TcxDBSpinEdit
         Left = 3
         Top = 32
@@ -237,30 +255,22 @@ object Frusuario: TFrusuario
         DataBinding.DataField = 'nome'
         DataBinding.DataSource = DataSource1
         TabOrder = 1
-        Width = 450
-      end
-      object cxDBTextEdit3: TcxDBTextEdit
-        Left = 165
-        Top = 79
-        DataBinding.DataField = 'cpf'
-        DataBinding.DataSource = DataSource1
-        TabOrder = 2
-        Width = 159
+        Width = 335
       end
       object cxDBTextEdit4: TcxDBTextEdit
-        Left = 344
+        Left = 352
         Top = 79
         DataBinding.DataField = 'rg'
         DataBinding.DataSource = DataSource1
-        TabOrder = 3
-        Width = 185
+        TabOrder = 2
+        Width = 177
       end
       object cxDBTextEdit5: TcxDBTextEdit
         Left = 3
         Top = 121
         DataBinding.DataField = 'endereco'
         DataBinding.DataSource = DataSource1
-        TabOrder = 4
+        TabOrder = 3
         Width = 462
       end
       object cxDBTextEdit6: TcxDBTextEdit
@@ -268,7 +278,7 @@ object Frusuario: TFrusuario
         Top = 121
         DataBinding.DataField = 'numero'
         DataBinding.DataSource = DataSource1
-        TabOrder = 5
+        TabOrder = 4
         Width = 58
       end
       object cxDBTextEdit7: TcxDBTextEdit
@@ -276,7 +286,7 @@ object Frusuario: TFrusuario
         Top = 199
         DataBinding.DataField = 'bairro'
         DataBinding.DataSource = DataSource1
-        TabOrder = 6
+        TabOrder = 5
         Width = 270
       end
       object cxDBTextEdit8: TcxDBTextEdit
@@ -284,7 +294,7 @@ object Frusuario: TFrusuario
         Top = 161
         DataBinding.DataField = 'complemento'
         DataBinding.DataSource = DataSource1
-        TabOrder = 7
+        TabOrder = 6
         Width = 391
       end
       object lcestado: TcxDBLookupComboBox
@@ -299,7 +309,7 @@ object Frusuario: TFrusuario
           end>
         Properties.ListSource = DataSource2
         Properties.OnEditValueChanged = lcestadoPropertiesEditValueChanged
-        TabOrder = 8
+        TabOrder = 7
         Width = 58
       end
       object lccidade: TcxDBLookupComboBox
@@ -313,7 +323,7 @@ object Frusuario: TFrusuario
             FieldName = 'nome_cidade'
           end>
         Properties.ListSource = DataSource3
-        TabOrder = 9
+        TabOrder = 8
         Width = 177
       end
       object cxDBMaskEdit1: TcxDBMaskEdit
@@ -322,7 +332,7 @@ object Frusuario: TFrusuario
         DataBinding.DataField = 'cep'
         DataBinding.DataSource = DataSource1
         Properties.EditMask = '99999-999'
-        TabOrder = 10
+        TabOrder = 9
         Width = 129
       end
       object BtnIncluir: TcxButton
@@ -364,7 +374,7 @@ object Frusuario: TFrusuario
           D24C0212A8F210EAAED3D01969BB3FD0BCDDE32BEB06D56AD5D09CCDDA66EE62
           EED6EF43A9AB2331008603ABCEFF019D3AAD15CCD8D2E00000000049454E44AE
           426082}
-        TabOrder = 11
+        TabOrder = 10
         OnClick = BtnIncluirClick
       end
       object BtnAlterar: TcxButton
@@ -403,7 +413,7 @@ object Frusuario: TFrusuario
           137EFD7ED36534DF8CCD06359D30A8692101315B625940FE2E712E72CB8F57B7
           C6909878676CE690C208AC23D14448C0C6D5B46F91A2579FC3D2A20822359220
           529030E4238DD84FA5DA3B29800000000049454E44AE426082}
-        TabOrder = 12
+        TabOrder = 11
         OnClick = BtnAlterarClick
       end
       object BtnExcluir: TcxButton
@@ -446,7 +456,7 @@ object Frusuario: TFrusuario
           CF738AAF6ED6EA4B006882CE77A14ABFD255D2799903606830E4EF28E274070C
           1C67D74255041044C25C9CE43B4149F8B16735F41B8038DB9300E07F6924ECFB
           01D589CC0000000049454E44AE426082}
-        TabOrder = 13
+        TabOrder = 12
         OnClick = BtnExcluirClick
       end
       object BtnGravar: TcxButton
@@ -490,7 +500,7 @@ object Frusuario: TFrusuario
           B0C326CF6E4D6D5B5D70FF47C9732CF700164099CE4D3373FCA76CAB43052CFF
           62065440001D884E130F19FC4FFF00FE20CB5D5DF1FFF30000000049454E44AE
           426082}
-        TabOrder = 14
+        TabOrder = 13
         OnClick = BtnGravarClick
       end
       object BtnCancelar: TcxButton
@@ -526,7 +536,7 @@ object Frusuario: TFrusuario
           87F0740DB6CB55D8965A879014E56C60E255DDF2B541F39333DD5C28471CB7E0
           465849F0227833CC9D3D1C3F6C1100FE8B5F5E8AB24DCA40F5DB000000004945
           4E44AE426082}
-        TabOrder = 15
+        TabOrder = 14
         OnClick = BtnCancelarClick
       end
       object cbPessoa: TcxDBRadioGroup
@@ -546,9 +556,45 @@ object Frusuario: TFrusuario
             Value = 'F'
           end>
         Style.Color = clBtnFace
-        TabOrder = 16
+        TabOrder = 15
         Height = 47
         Width = 150
+      end
+      object cxDBMaskEdit2: TcxDBMaskEdit
+        Left = 420
+        Top = 32
+        DataBinding.DataField = 'dt_nascimento'
+        DataBinding.DataSource = DataSource1
+        Properties.EditMask = '!99/99/0000;1;_'
+        TabOrder = 16
+        Width = 109
+      end
+      object cxDBMaskEdit3: TcxDBMaskEdit
+        Left = 168
+        Top = 79
+        DataBinding.DataField = 'cpf'
+        DataBinding.DataSource = DataSource1
+        Properties.EditMask = '999.999.999-99'
+        TabOrder = 17
+        Width = 170
+      end
+      object cxDBMaskEdit4: TcxDBMaskEdit
+        Left = 3
+        Top = 235
+        DataBinding.DataField = 'telefone'
+        DataBinding.DataSource = DataSource1
+        Properties.EditMask = '(99)99999-9999'
+        TabOrder = 18
+        Width = 129
+      end
+      object cxDBMaskEdit5: TcxDBMaskEdit
+        Left = 138
+        Top = 235
+        DataBinding.DataField = 'telefone_contato'
+        DataBinding.DataSource = DataSource1
+        Properties.EditMask = '!\(999\)000-0000;1;_'
+        TabOrder = 19
+        Width = 129
       end
     end
   end
@@ -648,17 +694,18 @@ object Frusuario: TFrusuario
   end
   object DataSource3: TDataSource
     DataSet = QueCidades
-    Left = 268
-    Top = 96
+    Left = 388
+    Top = 24
   end
   object DataSource2: TDataSource
     DataSet = QueEstados
-    Left = 344
-    Top = 96
+    Left = 328
+    Top = 24
   end
   object DataSource1: TDataSource
+    AutoEdit = False
     DataSet = QueTabela
-    Left = 304
-    Top = 96
+    Left = 360
+    Top = 24
   end
 end

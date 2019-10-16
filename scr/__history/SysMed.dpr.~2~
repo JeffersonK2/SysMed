@@ -5,18 +5,23 @@ uses
   uMed in 'uMed.pas' {ulogin},
   UFrmenu in 'UFrmenu.pas' {Frmenu},
   UFragendamento in 'UFragendamento.pas' {Frmagendamento},
+<<<<<<< HEAD
   dmSever in 'dmSever.pas' {dmServer: TDataModule},
   UFroperador in 'UFroperador.pas' {Froperadores},
   UFrusuario in 'UFrusuario.pas' {Frusuario};
+>>>>>>> d102f361a1538685d17cef86aea239a5c6d42129
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+<<<<<<< HEAD
+  Application.CreateForm(TdmServer, dmServer);
   Application.CreateForm(Tulogin, ulogin);
   Application.CreateForm(TdmServer, dmServer);
   Application.CreateForm(TFroperadores, Froperadores);
   Application.CreateForm(TFrusuario, Frusuario);
+>>>>>>> d102f361a1538685d17cef86aea239a5c6d42129
   Application.Run;
 end.

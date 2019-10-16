@@ -1,0 +1,26 @@
+unit uFrFuncoes;
+
+interface
+
+uses SysUtils, IniFiles, Windows, StdCtrls, Vcl.Dialogs;
+
+function LerINI(sArqIni, sSessao, sAtrib: String): String;
+
+implementation
+
+function LerINI(sArqIni, sSessao, sAtrib: String): String;
+var iniBD: TIniFile;
+    sVlr : String;
+begin
+  try
+    iniBD  := TIniFile.Create(sArqIni);
+    sVlr   := iniBD.ReadString(sSessao, sAtrib,'');
+    iniBD.Free;
+    Result := sVlr;
+  except
+    on E: Exception do
+      Result := 'Erro ao Conectar '+ E.Message;
+  end;
+end;
+
+end.

@@ -13,8 +13,8 @@ CREATE TABLE tab_usuarios (
     codigo_uf integer,
     nome_uf character varying(2),
     sexo character(1) DEFAULT 'M'::bpchar,
-    telefone character varying(10),
-    telefone_contato character varying(10),
+    telefone character varying(20),
+    telefone_contato character varying(20),
 	data_nascimento date
 
 );
@@ -35,3 +35,8 @@ ALTER SEQUENCE tab_usuarios_codigo_seq OWNED BY tab_usuarios.codigo;
 
 ALTER TABLE public.tab_usuarios
     ADD COLUMN dt_nascimento date;
+
+
+INSERT INTO TAB_USUARIOS VALUES(1,'HENDREW FELIPE MARTINS', '0699739799','103264391',
+						 'RUA VEREADOR CELSO ROMUALDO FERRARI','271','CIDADE ALTA II','CASA','87307802',
+						4104303,'CAMPO MOURAO',41,'PR','M','44998395339','46991158286','28/11/1991');

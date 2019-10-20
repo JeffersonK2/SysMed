@@ -15,9 +15,9 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TdmServer, dmServer);
   Application.CreateForm(Tulogin, ulogin);
   Application.CreateForm(TFroperadores, Froperadores);
   Application.CreateForm(TFrusuario, Frusuario);
-  Application.CreateForm(TdmServer, dmServer);
   Application.Run;
 end.

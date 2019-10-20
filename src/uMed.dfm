@@ -1805,7 +1805,7 @@ object ulogin: Tulogin
   object QueOperador: TZQuery
     Connection = dmServer.conexao
     Params = <>
-    Left = 16
-    Top = 104
+    Left = 24
+    Top = 16
   end
 end

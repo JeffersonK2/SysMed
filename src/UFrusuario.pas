@@ -96,7 +96,7 @@ var
 implementation
 
 {$R *.dfm}
-   uses uMed;
+   uses uMed, dmSever;
 
 
    procedure TFrusuario.AtivaDesativaBotoes;
@@ -125,7 +125,7 @@ end;
 
 procedure TFrusuario.BtnCancelarClick(Sender: TObject);
 begin
-AtivaDesativaBotoes;
+  AtivaDesativaBotoes;
   QueTabela.Cancel;
 end;
 
@@ -157,7 +157,7 @@ end;
 
 procedure TFrusuario.BtnIncluirClick(Sender: TObject);
 begin
-AtivaDesativaBotoes;
+  AtivaDesativaBotoes;
   QueTabela.Append;
   cbPessoa.ItemIndex := 0;
   TxtNome.SetFocus;

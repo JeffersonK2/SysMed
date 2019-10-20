@@ -545,8 +545,7 @@ object Frusuario: TFrusuario
     end
   end
   object QueCidades: TZQuery
-    Connection = ulogin.conexao
-    Active = True
+    Connection = dmServer.conexao
     SQL.Strings = (
       'select * from cidades where 1 = -1')
     Params = <>
@@ -554,8 +553,7 @@ object Frusuario: TFrusuario
     Top = 32
   end
   object QueEstados: TZQuery
-    Connection = ulogin.conexao
-    Active = True
+    Connection = dmServer.conexao
     SQL.Strings = (
       
         'Select distinct codigo_estado,sigla_estado from cidades order by' +
@@ -565,8 +563,7 @@ object Frusuario: TFrusuario
     Top = 32
   end
   object QueTabela: TZQuery
-    Connection = ulogin.conexao
-    Active = True
+    Connection = dmServer.conexao
     SQL.Strings = (
       'Select * from tab_usuarios where 0=1')
     Params = <>

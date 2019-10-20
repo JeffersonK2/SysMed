@@ -8,7 +8,8 @@ uses
   uFrFuncoes in 'uFrFuncoes.pas',
   UFroperador in 'UFroperador.pas' {Froperadores},
   UFrusuario in 'UFrusuario.pas' {Frusuario},
-  dmSever in 'dmSever.pas' {dmServer: TDataModule};
+  dmSever in 'dmSever.pas' {dmServer: TDataModule},
+  ufrPadrao in 'ufrPadrao.pas' {frmPadrao};
 
 {$R *.res}
 

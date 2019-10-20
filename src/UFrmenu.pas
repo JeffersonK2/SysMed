@@ -97,6 +97,7 @@ type
     procedure Panel5Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure Panel2Click(Sender: TObject);
+    procedure Profissionais1Click(Sender: TObject);
   private
     { Private declarations }
 
@@ -111,6 +112,8 @@ var
 implementation
 
 {$R *.dfm}
+
+uses uFrProfissional;
 
 procedure TFrmenu.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
@@ -338,6 +341,13 @@ begin
   if not(Sender is TPanel) then
     exit;
   (Sender as TPanel).ParentColor := true;
+end;
+
+procedure TFrmenu.Profissionais1Click(Sender: TObject);
+begin
+  if frmProfissional = nil then
+    frmProfissional := TfrmProfissional.create(Application);
+  frmProfissional.show;
 end;
 
 procedure TFrmenu.pSairClick(Sender: TObject);

@@ -7,9 +7,9 @@ object frmPadrao: TfrmPadrao
   Margins.Bottom = 0
   BorderStyle = bsSingle
   Caption = 'frmPadrao'
-  ClientHeight = 351
-  ClientWidth = 716
-  Color = clSilver
+  ClientHeight = 371
+  ClientWidth = 694
+  Color = clMoneyGreen
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -18,7 +18,7 @@ object frmPadrao: TfrmPadrao
   FormStyle = fsMDIChild
   KeyPreview = True
   OldCreateOrder = False
-  Position = poScreenCenter
+  Position = poDesktopCenter
   Visible = True
   OnClose = FormClose
   OnCreate = FormCreate
@@ -29,23 +29,29 @@ object frmPadrao: TfrmPadrao
   object pgcManute: TPageControl
     Left = 0
     Top = 0
-    Width = 716
-    Height = 318
+    Width = 694
+    Height = 338
     ActivePage = tshConsul
     Align = alClient
     TabOrder = 0
+    ExplicitWidth = 716
+    ExplicitHeight = 318
     object tshConsul: TTabSheet
       Caption = 'Consulta'
       TabVisible = False
+      ExplicitWidth = 708
+      ExplicitHeight = 308
       object panConsul: TPanel
         Left = 0
         Top = 0
-        Width = 708
+        Width = 686
         Height = 41
         Align = alTop
         BevelOuter = bvLowered
+        Color = clMoneyGreen
         ParentBackground = False
         TabOrder = 0
+        ExplicitTop = -6
         object lblCampos: TLabel
           Left = 32
           Top = 13
@@ -62,10 +68,11 @@ object frmPadrao: TfrmPadrao
         end
         object cbxPesqui: TJvDBComboBox
           Left = 80
-          Top = 10
+          Top = 14
           Width = 145
           Height = 21
           DotNetHighlighting = True
+          Color = clMoneyGreen
           DataSource = dtsManute
           DragMode = dmAutomatic
           ReadOnly = True
@@ -78,7 +85,7 @@ object frmPadrao: TfrmPadrao
           OnCloseUp = cbxPesquiCloseUp
         end
         object edtCodBar: TEdit
-          Left = 297
+          Left = 298
           Top = 10
           Width = 121
           Height = 21
@@ -118,68 +125,54 @@ object frmPadrao: TfrmPadrao
           TabOrder = 4
         end
       end
-      object grdConsul: TJPDBGrid
+      object grdConsul: TDBGrid
         Left = 0
         Top = 41
-        Width = 708
-        Height = 267
+        Width = 686
+        Height = 287
         Align = alClient
-        Color = clBtnFace
-        Ctl3D = False
         DataSource = dtsConsul
-        DefaultDrawing = False
-        DrawingStyle = gdsGradient
-        FixedColor = clSilver
-        GradientEndColor = clSilver
-        GradientStartColor = clBtnFace
+        GradientEndColor = clMedGray
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
-        ParentCtl3D = False
-        ReadOnly = True
         TabOrder = 1
         TitleFont.Charset = DEFAULT_CHARSET
         TitleFont.Color = clWindowText
         TitleFont.Height = -11
         TitleFont.Name = 'Tahoma'
         TitleFont.Style = []
-        OnDrawColumnCell = grdConsulDrawColumnCell
-        OnDblClick = grdConsulDblClick
-        OnTitleClick = grdConsulTitleClick
-        ColorLinha1 = clWindow
-        ColorLinha2 = clHighlight
-        ColorFonLinha1 = clBlack
-        ColorFonLinha2 = clMaroon
-        ColorColuna = clBtnFace
-        ColorSelected = 16311512
-        DeleteRecno = True
-        PintLinhaSel = True
-        PintColSel = True
-        PintaGrid = False
       end
     end
     object tshManute: TTabSheet
       Caption = 'Manuten'#231#227'o'
       ImageIndex = 1
       TabVisible = False
+      ExplicitWidth = 708
+      ExplicitHeight = 308
       object panManute: TPanel
         Left = 0
         Top = 0
-        Width = 708
-        Height = 308
+        Width = 686
+        Height = 328
         Align = alClient
         BevelOuter = bvLowered
+        Color = clMoneyGreen
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 708
+        ExplicitHeight = 308
       end
     end
   end
   object panBotoes: TPanel
     Left = 0
-    Top = 318
-    Width = 716
+    Top = 338
+    Width = 694
     Height = 33
     Align = alBottom
+    Color = clMoneyGreen
     ParentBackground = False
     TabOrder = 1
+    ExplicitTop = 340
     object bvlAdicio: TBevel
       Left = 376
       Top = 1
@@ -217,7 +210,7 @@ object frmPadrao: TfrmPadrao
       ExplicitHeight = 39
     end
     object btnSair: TBitBtn
-      Left = 640
+      Left = 618
       Top = 1
       Width = 75
       Height = 31
@@ -252,6 +245,7 @@ object frmPadrao: TfrmPadrao
         00000000000000000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFF10101028292918
         19191011110B0B0B121313050404000000000000000000000000}
       TabOrder = 0
+      ExplicitLeft = 640
     end
     object btnAdicio: TcxButton
       Left = 1
@@ -462,7 +456,7 @@ object frmPadrao: TfrmPadrao
         1C67D74255041044C25C9CE43B4149F8B16735F41B8038DB9300E07F6924ECFB
         01D589CC0000000049454E44AE426082}
       TabOrder = 5
-      ExplicitLeft = 295
+      ExplicitLeft = 307
       ExplicitTop = 2
     end
   end

@@ -9,7 +9,8 @@ uses
   UFroperador in 'UFroperador.pas' {Froperadores},
   UFrusuario in 'UFrusuario.pas' {Frusuario},
   dmSever in 'dmSever.pas' {dmServer: TDataModule},
-  ufrPadrao in 'ufrPadrao.pas' {frmPadrao};
+  ufrPadrao in 'ufrPadrao.pas' {frmPadrao},
+  uFrProfissional in 'uFrProfissional.pas' {frmProfissional};
 
 {$R *.res}
 
@@ -17,8 +18,10 @@ begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
   Application.CreateForm(TdmServer, dmServer);
+  Application.CreateForm(TFrmenu, Frmenu);
   Application.CreateForm(Tulogin, ulogin);
   Application.CreateForm(TFroperadores, Froperadores);
   Application.CreateForm(TFrusuario, Frusuario);
+  Application.CreateForm(TFrmagendamento, Frmagendamento);
   Application.Run;
 end.

@@ -1655,6 +1655,7 @@ object Frmenu: TFrmenu
     ParentBackground = False
     ParentFont = False
     TabOrder = 0
+    ExplicitTop = -6
   end
   object PMprincipal: TPanel
     Left = 0
@@ -1667,11 +1668,13 @@ object Frmenu: TFrmenu
     Color = clTeal
     ParentBackground = False
     TabOrder = 1
+    ExplicitLeft = -72
+    ExplicitTop = 49
     object pConf: TPanel
       Left = 0
-      Top = 241
+      Top = 193
       Width = 241
-      Height = 64
+      Height = 48
       Align = alTop
       Alignment = taLeftJustify
       BevelEdges = []
@@ -1680,7 +1683,7 @@ object Frmenu: TFrmenu
       Color = clTeal
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -15
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -1692,8 +1695,8 @@ object Frmenu: TFrmenu
       object Image2: TImage
         Left = 0
         Top = 0
-        Width = 64
-        Height = 64
+        Width = 48
+        Height = 48
         Align = alLeft
         ParentShowHint = False
         Picture.Data = {
@@ -2482,9 +2485,9 @@ object Frmenu: TFrmenu
     end
     object pRelat: TPanel
       Left = 0
-      Top = 177
+      Top = 145
       Width = 241
-      Height = 64
+      Height = 48
       Align = alTop
       Alignment = taLeftJustify
       BevelEdges = []
@@ -2493,7 +2496,7 @@ object Frmenu: TFrmenu
       Color = clTeal
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -15
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -2505,8 +2508,8 @@ object Frmenu: TFrmenu
       object Image3: TImage
         Left = 0
         Top = 0
-        Width = 64
-        Height = 64
+        Width = 48
+        Height = 48
         Align = alLeft
         Picture.Data = {
           0B546478504E47496D61676589504E470D0A1A0A0000000D4948445200000080
@@ -2809,7 +2812,7 @@ object Frmenu: TFrmenu
       Left = 0
       Top = 49
       Width = 241
-      Height = 64
+      Height = 48
       Align = alTop
       Alignment = taLeftJustify
       BevelEdges = []
@@ -2818,7 +2821,7 @@ object Frmenu: TFrmenu
       Color = clTeal
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -15
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -2830,8 +2833,8 @@ object Frmenu: TFrmenu
       object Image5: TImage
         Left = 0
         Top = 0
-        Width = 64
-        Height = 64
+        Width = 49
+        Height = 48
         Align = alLeft
         Center = True
         ParentShowHint = False
@@ -3237,13 +3240,14 @@ object Frmenu: TFrmenu
           4E44AE426082}
         Proportional = True
         ShowHint = False
+        ExplicitHeight = 49
       end
     end
     object pSair: TPanel
       Left = 0
-      Top = 305
+      Top = 241
       Width = 241
-      Height = 64
+      Height = 48
       Align = alTop
       Alignment = taLeftJustify
       BevelEdges = []
@@ -3252,7 +3256,7 @@ object Frmenu: TFrmenu
       Color = clTeal
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -15
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -3264,8 +3268,8 @@ object Frmenu: TFrmenu
       object Image6: TImage
         Left = 0
         Top = 0
-        Width = 64
-        Height = 64
+        Width = 48
+        Height = 48
         Align = alLeft
         ParentShowHint = False
         Picture.Data = {
@@ -3463,7 +3467,7 @@ object Frmenu: TFrmenu
       Color = clSilver
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -16
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -3472,9 +3476,9 @@ object Frmenu: TFrmenu
     end
     object pMovim: TPanel
       Left = 0
-      Top = 113
+      Top = 97
       Width = 241
-      Height = 64
+      Height = 48
       Align = alTop
       Alignment = taLeftJustify
       BevelEdges = []
@@ -3483,7 +3487,7 @@ object Frmenu: TFrmenu
       Color = clTeal
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -15
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -3495,8 +3499,8 @@ object Frmenu: TFrmenu
       object Image4: TImage
         Left = 0
         Top = 0
-        Width = 64
-        Height = 64
+        Width = 49
+        Height = 48
         Align = alLeft
         ParentShowHint = False
         Picture.Data = {
@@ -3959,6 +3963,7 @@ object Frmenu: TFrmenu
           44AE426082}
         Proportional = True
         ShowHint = False
+        ExplicitHeight = 49
       end
     end
   end
@@ -3977,7 +3982,7 @@ object Frmenu: TFrmenu
       Left = 0
       Top = 49
       Width = 241
-      Height = 64
+      Height = 48
       Align = alTop
       Alignment = taLeftJustify
       BevelEdges = []
@@ -3986,7 +3991,7 @@ object Frmenu: TFrmenu
       Color = clTeal
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -15
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -3998,8 +4003,8 @@ object Frmenu: TFrmenu
       object Image10: TImage
         Left = 0
         Top = 0
-        Width = 64
-        Height = 64
+        Width = 48
+        Height = 48
         Align = alLeft
         ParentShowHint = False
         Picture.Data = {
@@ -4412,8 +4417,6 @@ object Frmenu: TFrmenu
           2D30353A30309AE54DA40000000049454E44AE426082}
         Proportional = True
         ShowHint = True
-        ExplicitLeft = 6
-        ExplicitTop = 6
       end
     end
     object Panel6: TPanel
@@ -4428,7 +4431,7 @@ object Frmenu: TFrmenu
       Color = clSilver
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -16
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -4449,9 +4452,9 @@ object Frmenu: TFrmenu
     TabOrder = 3
     object Panel12: TPanel
       Left = 0
-      Top = 113
+      Top = 97
       Width = 241
-      Height = 64
+      Height = 48
       Align = alTop
       Alignment = taLeftJustify
       BevelEdges = []
@@ -4460,7 +4463,7 @@ object Frmenu: TFrmenu
       Color = clTeal
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -15
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -4469,11 +4472,12 @@ object Frmenu: TFrmenu
       OnClick = Panel12Click
       OnMouseEnter = Panel12MouseEnter
       OnMouseLeave = Panel12MouseLeave
+      ExplicitTop = 113
       object Image15: TImage
         Left = 0
         Top = 0
-        Width = 64
-        Height = 64
+        Width = 48
+        Height = 48
         Align = alLeft
         ParentShowHint = False
         Picture.Data = {
@@ -4900,7 +4904,7 @@ object Frmenu: TFrmenu
       Color = clSilver
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -16
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -4911,7 +4915,7 @@ object Frmenu: TFrmenu
       Left = 0
       Top = 49
       Width = 241
-      Height = 64
+      Height = 48
       Align = alTop
       Alignment = taLeftJustify
       BevelEdges = []
@@ -4920,7 +4924,7 @@ object Frmenu: TFrmenu
       Color = clTeal
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -15
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -4932,8 +4936,8 @@ object Frmenu: TFrmenu
       object Image8: TImage
         Left = 0
         Top = 0
-        Width = 64
-        Height = 64
+        Width = 48
+        Height = 48
         Align = alLeft
         ParentShowHint = False
         Picture.Data = {
@@ -5592,9 +5596,9 @@ object Frmenu: TFrmenu
     TabOrder = 4
     object Panel17: TPanel
       Left = 0
-      Top = 177
+      Top = 145
       Width = 241
-      Height = 64
+      Height = 48
       Align = alTop
       Alignment = taLeftJustify
       BevelEdges = []
@@ -5603,7 +5607,7 @@ object Frmenu: TFrmenu
       Color = clTeal
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -15
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -5611,11 +5615,12 @@ object Frmenu: TFrmenu
       TabOrder = 0
       OnMouseEnter = Panel17MouseEnter
       OnMouseLeave = Panel17MouseLeave
+      ExplicitTop = 177
       object Image18: TImage
         Left = 0
         Top = 0
-        Width = 65
-        Height = 64
+        Width = 48
+        Height = 48
         Align = alLeft
         Center = True
         ParentShowHint = False
@@ -12125,7 +12130,7 @@ object Frmenu: TFrmenu
       Left = 0
       Top = 49
       Width = 241
-      Height = 64
+      Height = 48
       Align = alTop
       Alignment = taLeftJustify
       BevelEdges = []
@@ -12134,7 +12139,7 @@ object Frmenu: TFrmenu
       Color = clTeal
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -15
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -12145,8 +12150,8 @@ object Frmenu: TFrmenu
       object Image19: TImage
         Left = 0
         Top = 0
-        Width = 64
-        Height = 64
+        Width = 48
+        Height = 48
         Align = alLeft
         Center = True
         ParentShowHint = False
@@ -12295,9 +12300,9 @@ object Frmenu: TFrmenu
     end
     object Panel19: TPanel
       Left = 0
-      Top = 241
+      Top = 193
       Width = 241
-      Height = 64
+      Height = 48
       Align = alTop
       Alignment = taLeftJustify
       BevelEdges = []
@@ -12306,7 +12311,7 @@ object Frmenu: TFrmenu
       Color = clTeal
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -15
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -12315,11 +12320,12 @@ object Frmenu: TFrmenu
       OnClick = Panel19Click
       OnMouseEnter = Panel19MouseEnter
       OnMouseLeave = Panel19MouseLeave
+      ExplicitTop = 241
       object Image7: TImage
         Left = 0
         Top = 0
-        Width = 65
-        Height = 64
+        Width = 48
+        Height = 48
         Align = alLeft
         Center = True
         ParentShowHint = False
@@ -12747,7 +12753,7 @@ object Frmenu: TFrmenu
       Color = clSilver
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -16
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -12756,9 +12762,9 @@ object Frmenu: TFrmenu
     end
     object Panel21: TPanel
       Left = 0
-      Top = 113
+      Top = 97
       Width = 241
-      Height = 64
+      Height = 48
       Align = alTop
       Alignment = taLeftJustify
       BevelEdges = []
@@ -12767,7 +12773,7 @@ object Frmenu: TFrmenu
       Color = clTeal
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -15
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -12775,11 +12781,12 @@ object Frmenu: TFrmenu
       TabOrder = 4
       OnMouseEnter = Panel21MouseEnter
       OnMouseLeave = Panel21MouseLeave
+      ExplicitTop = 113
       object Image21: TImage
         Left = 0
         Top = 0
-        Width = 64
-        Height = 64
+        Width = 48
+        Height = 48
         Align = alLeft
         Center = True
         ParentShowHint = False
@@ -13267,7 +13274,7 @@ object Frmenu: TFrmenu
       Left = 0
       Top = 49
       Width = 241
-      Height = 64
+      Height = 48
       Align = alTop
       Alignment = taLeftJustify
       BevelEdges = []
@@ -13276,7 +13283,7 @@ object Frmenu: TFrmenu
       Color = clTeal
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -15
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -13288,8 +13295,8 @@ object Frmenu: TFrmenu
       object Image9: TImage
         Left = 0
         Top = 0
-        Width = 64
-        Height = 64
+        Width = 48
+        Height = 48
         Align = alLeft
         ParentShowHint = False
         Picture.Data = {
@@ -13702,8 +13709,6 @@ object Frmenu: TFrmenu
           2D30353A30309AE54DA40000000049454E44AE426082}
         Proportional = True
         ShowHint = True
-        ExplicitLeft = 6
-        ExplicitTop = 6
       end
     end
     object Panel4: TPanel
@@ -13718,7 +13723,7 @@ object Frmenu: TFrmenu
       Color = clSilver
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
-      Font.Height = -19
+      Font.Height = -16
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentBackground = False
@@ -13739,6 +13744,7 @@ object Frmenu: TFrmenu
       end
       object Profissionais1: TMenuItem
         Caption = 'Profissionais'
+        OnClick = Profissionais1Click
       end
     end
     object Movimentao1: TMenuItem

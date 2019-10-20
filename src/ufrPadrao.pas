@@ -12,7 +12,11 @@ uses
   System.Actions, Vcl.ActnList, JvExStdCtrls, JvCombobox, JvDBCombobox, Vcl.Mask,
   ZAbstractRODataset, ZAbstractDataset, ZDataset, cxGraphics, cxLookAndFeels,
   cxLookAndFeelPainters, Vcl.Menus, dxSkinsCore, dxSkinsDefaultPainters,
-  cxButtons;
+  cxButtons, cxControls, cxStyles, cxCustomData, cxFilter, cxData,
+  cxDataStorage, cxEdit, cxNavigator, dxDateRanges,
+  cxDataControllerConditionalFormattingRulesManagerDialog, cxDBData,
+  cxGridLevel, cxClasses, cxGridCustomView, cxGridCustomTableView,
+  cxGridTableView, cxGridDBTableView, cxGrid;
 
 type
   TfrmPadrao = class(TForm)
@@ -21,7 +25,6 @@ type
     tshManute: TTabSheet;
     panBotoes: TPanel;
     panConsul: TPanel;
-    grdConsul: TJPDBGrid;
     btnSair: TBitBtn;
     bvlAdicio: TBevel;
     Bevel1: TBevel;
@@ -54,6 +57,7 @@ type
     btnSalvar: TcxButton;
     btnCancel: TcxButton;
     BtnExcluir: TcxButton;
+    grdConsul: TDBGrid;
     procedure actCancelExecute(Sender: TObject);
     procedure actEditarExecute(Sender: TObject);
     procedure actExcluiExecute(Sender: TObject);
